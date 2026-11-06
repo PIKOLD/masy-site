@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>MASY — женская одежда, Пермь</title>
+<meta name="description" content="MASY: собственное производство женской одежды в Перми. Шубы, пуховики, парки, пальто. Из наличия и пошив по вашим меркам. Доставка СДЭК по России.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MASY — женская одежда, Пермь">
+<meta property="og:description" content="Шубы, пуховики, парки и пальто собственного производства. Из наличия и по вашим меркам.">
+<meta property="og:image" content="https://pikold.github.io/masy-site/link/img/og.jpg">
+<meta property="og:url" content="https://pikold.github.io/masy-site/link/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" as="image" href="img/hero-900.webp" imagesrcset="img/hero-900.webp 900w, img/hero-1400.webp 1400w, img/hero-2000.webp 2000w" imagesizes="(min-width: 960px) 50vw, 100vw">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root {
+  --bg: #fff; --bg2: #f5f0e8; --bg3: #e8dfd1; --ink: #2a211c; --ink2: #85776c; --line: #e8e0d5; --accent: #4f3e35; --tape: #9a6a42;
+  --serif: 'Cormorant', Georgia, serif; --sans: 'Jost', Arial, sans-serif; --ease: cubic-bezier(.22, .7, .2, 1); --gut: 16px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { color-scheme: light; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html.lock { overflow: hidden; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 15px/1.55 var(--sans); letter-spacing: .005em; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; border-radius: 0; -webkit-tap-highlight-color: transparent; }
+h1, h2, h3, p { margin: 0; font-weight: 400; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
+::selection { background: var(--ink); color: var(--bg); }
+.ic { width: 22px; height: 22px; flex: none; }
+.eyebrow { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink2); margin-bottom: 12px; }
+.sec-title { font-family: var(--serif); font-size: 36px; line-height: 1.04; margin-bottom: 10px; }
+.lead { color: var(--ink2); font-size: 14px; margin-bottom: 22px; max-width: 420px; }
+
+/* Обложка */
+.hero { position: relative; height: min(84svh, 780px); min-height: 500px; overflow: hidden; background: var(--bg3); color: #fff; }
+.hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; transform: scale(1.06); transition: opacity 1s var(--ease), transform 7s cubic-bezier(.2, .6, .2, 1); }
+.hero img.loaded { transform: none; }
+.hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30, 22, 16, .3) 0, rgba(30, 22, 16, 0) 20%, rgba(30, 22, 16, 0) 52%, rgba(30, 22, 16, .52) 100%); }
+.hero-top { position: absolute; z-index: 2; top: calc(18px + env(safe-area-inset-top)); left: 0; right: 0; text-align: center; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
+.hero-bottom { position: absolute; z-index: 2; left: 0; right: 0; bottom: 34px; padding: 0 var(--gut); text-align: center; }
+.mark { font-family: var(--serif); font-weight: 400; font-size: clamp(64px, 19vw, 104px); letter-spacing: .24em; padding-left: .24em; line-height: 1; }
+.hero-sub { margin-top: 12px; font-size: 13.5px; letter-spacing: .04em; opacity: .94; }
+.hero-top, .mark, .hero-sub { opacity: 0; transform: translateY(12px); animation: rise 1.1s var(--ease) forwards; }
+.mark { animation-delay: .15s; }
+.hero-sub { animation-delay: .3s; }
+@keyframes rise { to { opacity: 1; transform: none; } }
+
+/* Бегущая строка, как на сайте */
+.promo { height: 34px; background: var(--bg2); overflow: hidden; display: flex; align-items: center; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.promo-track { display: flex; align-items: center; gap: 22px; padding-right: 22px; white-space: nowrap; animation: slide 60s linear infinite; }
+.promo-track i { width: 3px; height: 3px; border-radius: 50%; background: var(--ink2); flex: none; }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+.col { max-width: 540px; margin: 0 auto; padding: 0 var(--gut); }
+.sec { padding-top: 48px; }
+
+/* Ссылки-кнопки */
+.links { display: grid; gap: 8px; }
+.lnk { width: 100%; display: grid; grid-template-columns: 24px 1fr 18px; gap: 16px; align-items: center; min-height: 66px; padding: 11px 18px; border: 1px solid var(--line); background: var(--bg); text-align: left; transition: border-color .3s, background .35s var(--ease), color .35s var(--ease); }
+.lnk:hover { border-color: var(--ink); }
+.lnk b { display: block; font-weight: 400; font-size: 16px; line-height: 1.25; }
+.lnk small { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.35; color: var(--ink2); }
+.lnk .go { width: 18px; height: 18px; transition: transform .45s var(--ease); }
+.lnk:hover .go { transform: translateX(4px); }
+.lnk-main { background: var(--accent); border-color: var(--accent); color: #fff; }
+.lnk-main small { color: rgba(255, 255, 255, .7); }
+.lnk-main:hover { background: var(--ink); border-color: var(--ink); }
+details.call > summary { list-style: none; cursor: pointer; }
+details.call > summary::-webkit-details-marker { display: none; }
+details.call .go { transform: rotate(90deg); }
+details.call[open] .go { transform: rotate(-90deg); }
+details.call[open] > summary { border-color: var(--ink); }
+.phones { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+.phones a { display: block; padding: 13px 16px; background: var(--bg2); transition: background .3s; }
+.phones a:hover { background: var(--bg3); }
+.phones b { display: block; font-weight: 400; font-size: 15px; white-space: nowrap; }
+.phones small { font-size: 12px; color: var(--ink2); }
+
+/* Акция */
+.sale { position: relative; margin-top: 12px; display: grid; grid-template-columns: auto 1fr; gap: 6px 20px; align-items: center; padding: 22px 20px; background: var(--ink); color: #fff; text-align: left; width: 100%; overflow: hidden; }
+.sale::before { content: ''; position: absolute; inset: 6px; border: 1px solid rgba(255, 255, 255, .16); pointer-events: none; }
+.sale-n { font-family: var(--serif); font-size: 64px; line-height: .9; letter-spacing: -.01em; }
+.sale-t small { display: block; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: #bcae9f; margin-bottom: 4px; }
+.sale-t b { display: block; font-weight: 400; font-size: 16px; line-height: 1.3; }
+.sale-t span { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 12.5px; border-bottom: 1px solid rgba(255, 255, 255, .5); padding-bottom: 2px; }
+.sale-t .ic { width: 16px; height: 16px; transition: transform .45s var(--ease); }
+.sale:hover .sale-t .ic { transform: translateX(4px); }
+
+/* Каталог */
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.tile { position: relative; display: block; width: 100%; text-align: left; overflow: hidden; }
+.tile-img { position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden; background: var(--bg2); }
+.tile:first-child { grid-column: 1 / -1; }
+.tile:first-child .tile-img { aspect-ratio: 4 / 4.3; }
+.tile img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 26%; transition: opacity .7s var(--ease), transform 1.2s var(--ease); }
+.tile:hover img { transform: scale(1.035); }
+.tile-img::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 46%; background: linear-gradient(180deg, rgba(30, 22, 16, 0), rgba(30, 22, 16, .5)); }
+.tile-txt { position: absolute; z-index: 2; left: 14px; right: 12px; bottom: 12px; color: #fff; text-shadow: 0 1px 14px rgba(0, 0, 0, .3); }
+.tile-txt small { display: block; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; opacity: .88; margin-bottom: 4px; }
+.tile-txt b { display: block; font-family: var(--serif); font-weight: 400; font-size: 23px; line-height: 1.06; }
+.tile:first-child .tile-txt b { font-size: 30px; }
+.note { margin-top: 16px; padding-left: 12px; border-left: 1px solid var(--tape); font-size: 13px; color: var(--ink2); }
+
+/* Пошив */
+.atelier { margin: 56px calc(var(--gut) * -1) 0; background: var(--bg2); }
+.atelier-img { aspect-ratio: 4 / 4.2; overflow: hidden; }
+.atelier-img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.atelier-body { padding: 34px var(--gut) 38px; }
+.steps { margin: 4px 0 24px; border-top: 1px solid var(--bg3); counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--bg3); counter-increment: s; }
+.steps li::before { content: '0' counter(s); font-family: var(--serif); font-size: 20px; line-height: 1.2; color: var(--ink2); }
+.steps b { display: block; font-weight: 400; font-size: 15.5px; }
+.steps small { display: block; font-size: 13px; color: var(--ink2); line-height: 1.45; margin-top: 2px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; font-size: 13px; letter-spacing: .04em; border: 1px solid var(--ink); text-align: center; transition: background .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease); }
+.btn .ic { width: 18px; height: 18px; }
+.btn-solid { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-solid:hover { background: var(--ink); border-color: var(--ink); }
+.btn-line:hover { background: var(--ink); color: #fff; }
+.btn-wide { width: 100%; }
+.btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.btn-row .btn { padding: 0 12px; }
+
+/* Вопросы */
+.qa { border-top: 1px solid var(--line); }
+.qa details { border-bottom: 1px solid var(--line); }
+.qa summary { display: grid; grid-template-columns: 24px 1fr 18px; gap: 14px; align-items: center; padding: 17px 0; cursor: pointer; list-style: none; font-size: 15.5px; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary .ic { color: var(--ink2); }
+.qa summary .pm { width: 16px; height: 16px; transition: transform .4s var(--ease); }
+.qa details[open] .pm { transform: rotate(45deg); }
+.qa p { padding: 0 0 18px 38px; font-size: 14px; color: var(--ink2); }
+.qa p a { color: var(--ink); border-bottom: 1px solid currentColor; }
+
+/* Шоурум */
+.visit { padding: 30px 22px 24px; border: 1px solid var(--line); }
+.visit address { font-style: normal; font-size: 15.5px; line-height: 1.5; }
+.visit address small { display: block; font-size: 13px; color: var(--ink2); }
+.status { display: inline-flex; align-items: center; gap: 8px; margin: 16px 0 6px; font-size: 13px; }
+.status i { width: 7px; height: 7px; border-radius: 50%; background: #b9a996; }
+.status.open i { background: #5f8a5a; box-shadow: 0 0 0 4px rgba(95, 138, 90, .16); }
+.hours { margin: 8px 0 22px; font-size: 14px; }
+.hours div { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.hours dt { color: var(--ink2); }
+.hours dd { margin: 0; }
+.hours .today dt, .hours .today dd { color: var(--ink); }
+.hours .today dt::after { content: ' · сегодня'; color: var(--tape); }
+
+/* Подвал */
+.foot { margin-top: 64px; padding: 54px var(--gut) calc(30px + env(safe-area-inset-bottom)); background: var(--bg2); text-align: center; }
+.foot-quote { font-family: var(--serif); font-size: 32px; line-height: 1.1; margin-bottom: 30px; }
+.foot-mark { font-family: var(--serif); font-size: 24px; letter-spacing: .24em; padding-left: .24em; }
+.foot small { display: block; margin-top: 8px; font-size: 12px; color: var(--ink2); }
+
+/* Окно с сообщением */
+.sheet { padding: 0; border: 0; width: 100%; max-width: 100vw; max-height: 100svh; margin: auto auto 0; background: transparent; color: var(--ink); overflow: visible; }
+.sheet::backdrop { background: rgba(30, 22, 16, .46); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
+.sheet[open] .sheet-box { animation: up .5s var(--ease); }
+.sheet[open]::backdrop { animation: fade .4s var(--ease); }
+@keyframes up { from { transform: translateY(40px); opacity: 0; } }
+@keyframes fade { from { opacity: 0; } }
+.sheet-box { max-width: 540px; margin: 0 auto; background: var(--bg); padding: 22px var(--gut) calc(20px + env(safe-area-inset-bottom)); max-height: 92svh; overflow: auto; }
+.sheet-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 16px; }
+.sheet-head h3 { font-family: var(--serif); font-size: 30px; line-height: 1.06; }
+.sheet-head .eyebrow { margin-bottom: 8px; }
+.x { width: 40px; height: 40px; display: grid; place-items: center; margin: -8px -8px 0 0; }
+.sheet label { display: block; font-size: 12px; color: var(--ink2); margin-bottom: 6px; }
+.sheet textarea { display: block; width: 100%; min-height: 96px; resize: vertical; padding: 12px 14px; border: 1px solid var(--line); background: var(--bg2); font: 400 15px/1.5 var(--sans); color: var(--ink); border-radius: 0; outline: 0; }
+.sheet textarea:focus { border-color: var(--ink); }
+.sheet .links { margin-top: 14px; }
+.sheet .lnk { min-height: 60px; }
+.sheet-foot { margin-top: 12px; font-size: 12px; color: var(--ink2); text-align: center; }
+
+.toast { position: fixed; z-index: 200; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom)); transform: translate(-50%, 20px); opacity: 0; pointer-events: none; max-width: calc(100vw - 32px); padding: 12px 18px; background: var(--ink); color: #fff; font-size: 13px; text-align: center; transition: opacity .3s, transform .45s var(--ease); }
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+
+/* Появление при прокрутке */
+img.fade { opacity: 0; }
+img.fade.loaded { opacity: 1; }
+.js [data-reveal] { opacity: 0; transform: translateY(16px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.js [data-reveal].in { opacity: 1; transform: none; }
+
+/* Компьютер: фото слева на всю высоту, ссылки справа */
+@media (min-width: 960px) {
+  .hero { position: fixed; top: 0; left: 0; bottom: 0; width: 50vw; height: auto; min-height: 0; }
+  .hero-top { top: 28px; }
+  .hero-bottom { bottom: 56px; }
+  .mark { font-size: clamp(84px, 8vw, 132px); }
+  .hero-sub { font-size: 14.5px; }
+  .page { margin-left: 50vw; min-height: 100vh; }
+  .col { padding: 0 40px; max-width: 620px; }
+  .sec:first-of-type { padding-top: 64px; }
+  .atelier { margin-left: 0; margin-right: 0; }
+  .atelier-body { padding: 36px 34px 40px; }
+  .sheet { margin: auto; }
+  .sheet-box { padding: 30px 32px 28px; }
+}
+@media (max-width: 370px) {
+  .phones { grid-template-columns: 1fr; }
+  .sale-n { font-size: 54px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .promo-track { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="fade" src="img/hero-900.webp" srcset="img/hero-900.webp 900w, img/hero-1400.webp 1400w, img/hero-2000.webp 2000w" sizes="(min-width: 960px) 50vw, 100vw" alt="Шуба MASY из экопесца" fetchpriority="high">
+  <p class="hero-top">Женская одежда · Пермь</p>
+  <div class="hero-bottom">
+    <h1 class="mark">MASY</h1>
+    <p class="hero-sub">Собственное производство<br>Из&nbsp;наличия и&nbsp;по&nbsp;вашим меркам</p>
+  </div>
+</header>
+
+<div class="page">
+  <div class="promo" aria-hidden="true"><div class="promo-track" id="promo"></div></div>
+
+  <main class="col">
+
+    <section class="sec" id="contact" data-reveal>
+      <small class="eyebrow">Заказ и вопросы</small>
+      <h2 class="sec-title">Напишите нам</h2>
+      <p class="lead">Подскажем по&nbsp;размеру, пришлём фото и&nbsp;видео вещей в&nbsp;наличии, оформим заказ и&nbsp;доставку.</p>
+      <div class="links">
+        <a class="lnk lnk-main" data-link="tg" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 4.4 3.4 11.1l5.7 2.1 2.2 6.3 3.2-4 4.6 3.4 1.5-14.5Z"/><path d="m9.1 13.2 8.6-6.4-6.4 7.6"/></svg>
+          <span><b>Telegram</b><small>Анастасия · заказ и наличие</small></span>
+          <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
+        </a>
+        <a class="lnk" data-link="max" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.8c-4.6 0-8.2 3.3-8.2 7.8 0 1.9.7 3.7 1.9 5l-.6 3.6 3.5-1.5c1.1.4 2.2.6 3.4.6 4.6 0 8.2-3.4 8.2-7.8S16.6 3.8 12 3.8Z"/><path d="M8.6 14.2V9.3l3.4 3.2 3.4-3.2v4.9"/></svg>
+          <span><b>MAX</b><small>Ольга · по всем вопросам</small></span>
+          <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
+        </a>
+        <a class="lnk" data-link="wa" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.6a8.4 8.4 0 0 0-7.3 12.6l-1.1 4.2 4.3-1.1A8.4 8.4 0 1 0 12 3.6Z"/><path d="M9.3 8.3c.3-.3.8-.2 1 .2l.6 1.4c.1.3 0 .6-.2.8l-.5.5c.5 1.1 1.4 2 2.5 2.5l.5-.5c.2-.2.5-.3.8-.2l1.4.6c.4.2.5.7.2 1-.7.8-1.7 1-2.6.6a8 8 0 0 1-4.2-4.2c-.4-.9-.2-1.9.5-2.7Z"/></svg>
+          <span><b>WhatsApp</b><small>Ольга</small></span>
+          <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
+        </a>
+        <details class="call">
+          <summary class="lnk">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.8h2.3l1.4 4-1.9 1.3a11 11 0 0 0 6.5 6.5l1.3-1.9 4 1.4v2.3a2 2 0 0 1-2.1 2C10.4 19 5 13.6 4.6 6a2 2 0 0 1 2-2.2Z"/></svg>
+            <span><b>Позвонить</b><small>Анастасия и Ольга</small></span>
+            <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
+          </summary>
+          <div class="phones" id="phones"></div>
+        </details>
+      </div>
+      <button class="sale" id="sale" type="button" data-ask="Осенняя коллекция −30%" data-msg="Здравствуйте! Хочу узнать про осеннюю коллекцию со скидкой 30%. Что сейчас есть в наличии?" hidden>
+        <span class="sale-n">−30%</span>
+        <span class="sale-t"><small>Sale</small><b>На всю осеннюю коллекцию</b><span>Узнать о наличии <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg></span></span>
+      </button>
+    </section>
+
+    <section class="sec" id="catalog">
+      <div data-reveal>
+        <small class="eyebrow">Каталог</small>
+        <h2 class="sec-title">Что носить этой зимой</h2>
+        <p class="lead">Нажмите на&nbsp;раздел: пришлём фото, размеры и&nbsp;цены того, что есть сейчас.</p>
+      </div>
+      <div class="tiles" id="tiles"></div>
+      <p class="note" data-reveal>Наличие обновляется каждый день. Если нужного размера нет, сошьём его для&nbsp;вас.</p>
+    </section>
+
+    <section class="atelier" id="atelier">
+      <div class="atelier-img"><img class="fade" src="img/atelier-1200.webp" alt="Пальто MASY цвета бургунди" loading="lazy"></div>
+      <div class="atelier-body" data-reveal>
+        <small class="eyebrow">Индивидуальный заказ</small>
+        <h2 class="sec-title">Сошьём по&nbsp;вашим меркам</h2>
+        <p class="lead">Модель из&nbsp;коллекции или редкая вещь, которой нет в&nbsp;наличии, в&nbsp;вашем размере и&nbsp;по&nbsp;вашей фигуре.</p>
+        <ol class="steps">
+          <li><span><b>Выбираем модель и&nbsp;цвет</b><small>Покажем ткани и&nbsp;подскажем, что подойдёт</small></span></li>
+          <li><span><b>Снимаем мерки</b><small>В&nbsp;шоуруме или по&nbsp;нашей подсказке дома</small></span></li>
+          <li><span><b>Шьём</b><small>В&nbsp;сезон пошив занимает 14&nbsp;рабочих дней</small></span></li>
+          <li><span><b>Отправляем</b><small>Доставкой по&nbsp;России или забираете в&nbsp;шоуруме</small></span></li>
+        </ol>
+        <button class="btn btn-solid btn-wide" type="button" data-ask="Пошив по меркам" data-msg="Здравствуйте! Хочу заказать индивидуальный пошив по моим меркам.">Обсудить пошив</button>
+      </div>
+    </section>
+
+    <section class="sec" id="info" data-reveal>
+      <small class="eyebrow">Покупателям</small>
+      <h2 class="sec-title">Доставка и&nbsp;обмен</h2>
+      <div class="qa">
+        <details>
+          <summary><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7h10.5v9.5H3.5zM14 10h3.6l2.9 3v3.5H14"/><circle cx="7.3" cy="17.3" r="1.7"/><circle cx="16.8" cy="17.3" r="1.7"/></svg><span>Доставка по России</span><svg class="ic pm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Отправляем СДЭК, Почтой России, через Ozon и&nbsp;Яндекс Маркет. Стоимость зависит от&nbsp;города, точную сумму назовём при оформлении заказа.</p>
+        </details>
+        <details>
+          <summary><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 9.5A7.6 7.6 0 0 1 18.4 7.6M19.5 14.5A7.6 7.6 0 0 1 5.6 16.4"/><path d="M18.8 3.8v4h-4M5.2 20.2v-4h4"/></svg><span>Обмен, возврат и&nbsp;подгонка</span><svg class="ic pm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Если вещь не&nbsp;подошла, оформим обмен или возврат. А&nbsp;если нужно, подгоним её&nbsp;по&nbsp;вашей фигуре.</p>
+        </details>
+        <details>
+          <summary><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h16v3H4zM5.5 12.5V20h13v-7.5M12 9.5V20"/><path d="M12 9.5S10.9 5 8.6 5a1.9 1.9 0 0 0 0 3.8M12 9.5S13.1 5 15.4 5a1.9 1.9 0 0 1 0 3.8"/></svg><span>Бонусы UDS</span><svg class="ic pm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Копите бонусы за&nbsp;покупки и&nbsp;получайте скидку на&nbsp;следующие заказы. <a data-link="uds" target="_blank" rel="noopener">Подключиться в&nbsp;UDS</a></p>
+        </details>
+      </div>
+    </section>
+
+    <section class="sec" id="showroom" data-reveal>
+      <small class="eyebrow">Шоурум</small>
+      <h2 class="sec-title">Примерьте в&nbsp;Перми</h2>
+      <div class="visit">
+        <address>ул. Революции, 20<small>БЦ «Бонус», 6&nbsp;этаж, левое крыло, офис&nbsp;604</small></address>
+        <p class="status" id="status"><i></i><span></span></p>
+        <dl class="hours" id="hours"></dl>
+        <div class="btn-row">
+          <a class="btn btn-line" data-link="yandex" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Яндекс Карты</a>
+          <a class="btn btn-line" data-link="gis" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>2ГИС</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="social" data-reveal>
+      <small class="eyebrow">Новинки</small>
+      <h2 class="sec-title">Мы в&nbsp;соцсетях</h2>
+      <div class="links">
+        <a class="lnk" data-link="channel" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 4.4 3.4 11.1l5.7 2.1 2.2 6.3 3.2-4 4.6 3.4 1.5-14.5Z"/><path d="m9.1 13.2 8.6-6.4-6.4 7.6"/></svg>
+          <span><b>Telegram-канал</b><small>Новинки, наличие и&nbsp;скидки</small></span>
+          <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
+        </a>
+        <a class="lnk" data-link="vk" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round" aria-hidden="true"><path d="M3.6 7.4c.3 5.8 3.2 9.2 8.3 9.2h.3v-3.2c1.9.2 3.2 1.6 3.8 3.2h2.5c-.7-2.6-2.6-4-3.7-4.5 1.1-.7 2.8-2.4 3.2-4.7h-2.3c-.5 1.9-2 3.5-3.5 3.7V7.4H10v6.5c-1.5-.4-3.3-2.2-3.4-6.5H3.6Z"/></svg>
+          <span><b>ВКонтакте</b><small>Сообщество MASY</small></span>
+          <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
+        </a>
+        <a class="lnk" data-link="uds" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h16v3H4zM5.5 12.5V20h13v-7.5M12 9.5V20"/><path d="M12 9.5S10.9 5 8.6 5a1.9 1.9 0 0 0 0 3.8M12 9.5S13.1 5 15.4 5a1.9 1.9 0 0 1 0 3.8"/></svg>
+          <span><b>UDS</b><small>Бонусы за&nbsp;покупки</small></span>
+          <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
+        </a>
+        <a class="lnk" data-link="site" target="_blank" rel="noopener" hidden>
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.200 3.5 8.500S14.4 18.100 12 20.500C9.6 18.100 8.5 15.300 8.5 12S9.6 5.900 12 3.500Z"/></svg>
+          <span><b>Сайт MASY</b><small>Каталог и&nbsp;заказ онлайн</small></span>
+          <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
+        </a>
+      </div>
+      <div class="btn-row" style="margin-top: 8px">
+        <a class="btn btn-line" href="masy.vcf" download="MASY.vcf"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M5.8 16c.5-1.5 1.7-2.3 3.2-2.3s2.7.8 3.2 2.3M14.5 10H18M14.5 13H18"/></svg>В контакты</a>
+        <button class="btn btn-line" type="button" id="share"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5v11M8 7.5l4-4 4 4"/><path d="M5.5 11v8.5h13V11"/></svg>Поделиться</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <p class="foot-quote">Мода переменчива,<br>стиль вечен</p>
+    <div class="foot-mark">MASY</div>
+    <small id="legal"></small>
+  </footer>
+</div>
+
+<dialog class="sheet" id="sheet" aria-labelledby="shTitle">
+  <div class="sheet-box">
+    <div class="sheet-head">
+      <div><small class="eyebrow">Сообщение для MASY</small><h3 id="shTitle"></h3></div>
+      <button class="x" type="button" data-close aria-label="Закрыть"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" aria-hidden="true"><path d="M5.5 5.5l13 13M18.5 5.5l-13 13"/></svg></button>
+    </div>
+    <label for="shText">Текст можно изменить перед отправкой</label>
+    <textarea id="shText" rows="3"></textarea>
+    <div class="links">
+      <a class="lnk lnk-main" data-send="tg" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 4.4 3.4 11.1l5.7 2.1 2.2 6.3 3.2-4 4.6 3.4 1.5-14.5Z"/><path d="m9.1 13.2 8.6-6.4-6.4 7.6"/></svg>
+        <span><b>Отправить в Telegram</b><small>Анастасии</small></span>
+        <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
+      </a>
+      <a class="lnk" data-send="max" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.8c-4.6 0-8.2 3.3-8.2 7.8 0 1.9.7 3.7 1.9 5l-.6 3.6 3.5-1.5c1.1.4 2.2.6 3.4.6 4.6 0 8.2-3.4 8.2-7.8S16.6 3.8 12 3.8Z"/><path d="M8.6 14.2V9.3l3.4 3.2 3.4-3.2v4.9"/></svg>
+        <span><b>Отправить в MAX</b><small>Ольге · текст скопируется, вставьте его в&nbsp;чат</small></span>
+        <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
+      </a>
+      <a class="lnk" data-send="wa" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.6a8.4 8.4 0 0 0-7.3 12.6l-1.1 4.2 4.3-1.1A8.4 8.4 0 1 0 12 3.6Z"/><path d="M9.3 8.3c.3-.3.8-.2 1 .2l.6 1.4c.1.3 0 .6-.2.8l-.5.5c.5 1.1 1.4 2 2.5 2.5l.5-.5c.2-.2.5-.3.8-.2l1.4.6c.4.2.5.7.2 1-.7.8-1.7 1-2.6.6a8 8 0 0 1-4.2-4.2c-.4-.9-.2-1.9.5-2.7Z"/></svg>
+        <span><b>Отправить в WhatsApp</b><small>Ольге</small></span>
+        <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
+      </a>
+    </div>
+    <p class="sheet-foot">Ответим в&nbsp;часы работы шоурума</p>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ===== Все данные бренда: правится только здесь ===== */
+const MASY = {
+  telegram: 'anastasiyatiumisova',                       // личный Telegram для заказов (без @)
+  whatsapp: '79523332535',                               // номер WhatsApp без +
+  max: 'https://max.ru/u/f9LHodD0cOKIzAfgSIzve64Scpe3_eobl87K4FdjckLNQWRKxitczbsPFHA',
+  channel: 'https://t.me/bymasy',
+  vk: 'https://vk.com/public130882764',
+  uds: 'https://bymasy.uds.app/c',
+  site: '',                                              // когда запустим сайт, вписать адрес, и появится кнопка
+  phones: [
+    { name: 'Анастасия', show: '+7 919 476-70-48', tel: '+79194767048' },
+    { name: 'Ольга', show: '+7 952 333-25-35', tel: '+79523332535' },
+  ],
+  yandex: 'https://yandex.ru/maps/?text=' + encodeURIComponent('Пермь, ул. Революции, 20, БЦ Бонус'),
+  gis: 'https://2gis.ru/perm/search/' + encodeURIComponent('Революции, 20'),
+  // часы шоурума по пермскому времени: [день недели 0=вс..6=сб] = [открытие, закрытие]
+  hours: { 1: [15, 20], 2: [15, 20], 3: [15, 20], 4: [15, 20], 5: [15, 20], 6: [14, 18], 0: [14, 18] },
+  sale: true,                                            // false, когда акция −30% закончится
+  legal: 'ИП Сутягин',
+  ticker: ['Собственное производство', 'Пошив по вашим меркам', 'Доставка СДЭК по России', 'Шоурум в Перми'],
+  catalog: [
+    { name: 'Шубы и бомберы', tag: 'Экомех', img: 'furs', msg: 'Здравствуйте! Интересуют шубы и бомберы из экомеха. Подскажите, что сейчас есть в наличии?' },
+    { name: 'Пуховики', tag: 'Хит сезона', img: 'down', msg: 'Здравствуйте! Интересуют пуховики. Подскажите, что сейчас есть в наличии?' },
+    { name: 'Парки и жилеты', tag: 'Мембрана', img: 'parka', msg: 'Здравствуйте! Интересуют парки и жилеты. Подскажите, что сейчас есть в наличии?' },
+    { name: 'Пальто и тренчи', tag: 'Шерсть, коттон', img: 'coats', msg: 'Здравствуйте! Интересуют пальто и тренчи. Подскажите, что сейчас есть в наличии?' },
+    { name: 'Платья и костюмы', tag: 'Шёлк, вуаль', img: 'dresses', msg: 'Здравствуйте! Интересуют платья и костюмы. Подскажите, что сейчас есть в наличии?' },
+  ],
+};
+
+(function () {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  document.documentElement.classList.add('js');
+  const arrow = '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>';
+
+  /* Ссылки */
+  const href = {
+    tg: `https://t.me/${MASY.telegram}`, wa: `https://wa.me/${MASY.whatsapp}`, max: MASY.max, channel: MASY.channel,
+    vk: MASY.vk, uds: MASY.uds, site: MASY.site, yandex: MASY.yandex, gis: MASY.gis,
+  };
+  $$('[data-link]').forEach((a) => {
+    const h = href[a.dataset.link];
+    if (h) { a.href = h; a.hidden = false; } else a.hidden = true;
+  });
+  $('#phones').innerHTML = MASY.phones.map((p) => `<a href="tel:${p.tel}"><b>${p.show}</b><small>${p.name}</small></a>`).join('');
+  $('#legal').textContent = `© ${new Date().getFullYear()} ${MASY.legal}`;
+  $('#sale').hidden = !MASY.sale;
+  const run = MASY.ticker.map((t) => `<span>${t}</span><i></i>`).join('');
+  $('#promo').innerHTML = run.repeat(6);
+
+  /* Каталог */
+  $('#tiles').innerHTML = MASY.catalog.map((c, i) => `
+    <button class="tile" type="button" data-reveal style="transition-delay:${(i % 2) * 70}ms" data-ask="${c.name}" data-msg="${c.msg}">
+      <span class="tile-img"><img class="fade" src="img/${c.img}-${i ? 640 : 1100}.webp" alt="" loading="lazy"></span>
+      <span class="tile-txt"><small>${c.tag}</small><b>${c.name}</b></span>
+    </button>`).join('');
+
+  /* Картинки проявляются после загрузки */
+  $$('img.fade').forEach((img) => {
+    const done = () => img.classList.add('loaded');
+    if (img.complete && img.naturalWidth) done(); else img.addEventListener('load', done, { once: true });
+  });
+
+  /* Появление блоков */
+  const els = $$('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((list) => list.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    els.forEach((el) => io.observe(el));
+  } else els.forEach((el) => el.classList.add('in'));
+
+  /* Уведомление внизу */
+  const toast = $('#toast');
+  let tt;
+  const say = (t) => { toast.textContent = t; toast.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('on'), 3200); };
+  const copy = async (t) => {
+    try { await navigator.clipboard.writeText(t); return true; } catch (e) {
+      const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;opacity:0';
+      document.body.append(ta); ta.select();
+      let ok = false; try { ok = document.execCommand('copy'); } catch (_) {}
+      ta.remove(); return ok;
+    }
+  };
+
+  /* Окно с готовым сообщением */
+  const sheet = $('#sheet'), text = $('#shText');
+  const sync = () => {
+    const t = encodeURIComponent(text.value.trim());
+    $('[data-send=tg]', sheet).href = `https://t.me/${MASY.telegram}?text=${t}`;
+    $('[data-send=wa]', sheet).href = `https://wa.me/${MASY.whatsapp}?text=${t}`;
+    $('[data-send=max]', sheet).href = MASY.max;
+  };
+  const close = () => { sheet.close(); };
+  sheet.addEventListener('close', () => document.documentElement.classList.remove('lock'));
+  text.addEventListener('input', sync);
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-ask]');
+    if (!b) return;
+    $('#shTitle').textContent = b.dataset.ask;
+    text.value = b.dataset.msg;
+    sync();
+    if (typeof sheet.showModal === 'function') { sheet.showModal(); document.documentElement.classList.add('lock'); }
+    else { window.open(`https://t.me/${MASY.telegram}?text=${encodeURIComponent(b.dataset.msg)}`, '_blank'); }
+  });
+  sheet.addEventListener('click', (e) => { if (e.target === sheet || e.target.closest('[data-close]')) close(); });
+  $('[data-send=max]', sheet).addEventListener('click', () => { copy(text.value.trim()).then((ok) => ok && say('Текст скопирован, вставьте его в чат MAX')); });
+  $$('[data-send]', sheet).forEach((a) => a.addEventListener('click', () => setTimeout(close, 300)));
+
+  /* Шоурум: часы и «сейчас открыто» по пермскому времени */
+  const DAYS = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+  const ORDER = [1, 2, 3, 4, 5, 6, 0];
+  const perm = () => {
+    const p = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Yekaterinburg', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date());
+    const get = (t) => (p.find((x) => x.type === t) || {}).value;
+    return { day: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(get('weekday')), h: +get('hour') + +get('minute') / 60 };
+  };
+  const hh = (h) => `${String(h).padStart(2, '0')}:00`;
+  const groups = [];
+  ORDER.forEach((d) => {
+    const v = MASY.hours[d], last = groups[groups.length - 1];
+    if (last && String(last.v) === String(v)) last.days.push(d); else groups.push({ v, days: [d] });
+  });
+  const short = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+  let now = { day: -1, h: 0 };
+  try { now = perm(); } catch (e) {}
+  $('#hours').innerHTML = groups.map((g) => {
+    const label = g.days.length > 1 ? `${short[g.days[0]]}–${short[g.days[g.days.length - 1]]}` : short[g.days[0]];
+    return `<div class="${g.days.includes(now.day) ? 'today' : ''}"><dt>${label}</dt><dd>${g.v ? `${hh(g.v[0])}–${hh(g.v[1])}` : 'выходной'}</dd></div>`;
+  }).join('');
+  const st = $('#status');
+  if (now.day >= 0) {
+    const today = MASY.hours[now.day];
+    if (today && now.h >= today[0] && now.h < today[1]) { st.classList.add('open'); $('span', st).textContent = `Сейчас открыто, до ${hh(today[1])}`; }
+    else if (today && now.h < today[0]) $('span', st).textContent = `Сейчас закрыто, откроемся сегодня в ${hh(today[0])}`;
+    else {
+      let d = (now.day + 1) % 7, n = 1;
+      while (!MASY.hours[d] && n < 7) { d = (d + 1) % 7; n++; }
+      $('span', st).textContent = `Сейчас закрыто, откроемся ${n === 1 ? 'завтра' : DAYS[d].toLowerCase()} в ${hh(MASY.hours[d][0])}`;
+    }
+  } else st.hidden = true;
+
+  /* Поделиться страницей */
+  $('#share').addEventListener('click', async () => {
+    const data = { title: 'MASY — женская одежда, Пермь', url: location.href.split('#')[0] };
+    if (navigator.share) { try { await navigator.share(data); } catch (e) {} return; }
+    if (await copy(data.url)) say('Ссылка скопирована');
+  });
+})();
+</script>
+</body>
+</html>

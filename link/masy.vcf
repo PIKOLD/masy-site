@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+N:;MASY;;;
+FN:MASY — женская одежда
+ORG:MASY
+item1.TEL;TYPE=CELL:+79194767048
+item1.X-ABLabel:Анастасия
+item2.TEL;TYPE=CELL:+79523332535
+item2.X-ABLabel:Ольга
+ADR;TYPE=WORK:;БЦ «Бонус»\, 6 этаж\, офис 604;ул. Революции\, 20;Пермь;;;Россия
+URL:https://pikold.github.io/masy-site/link/
+item3.URL:https://t.me/bymasy
+item3.X-ABLabel:Telegram
+NOTE:Шоурум: пн–пт 15:00–20:00\, сб–вс 14:00–18:00
+END:VCARD
