@@ -3,13 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex">
 <meta name="theme-color" content="#ffffff">
 <title>MASY — женская одежда, Пермь</title>
 <meta name="description" content="MASY: собственное производство женской одежды в Перми. Напишите нам в Telegram или MAX, заберите бонусы UDS, приходите в шоурум на Революции, 20.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="MASY — женская одежда, Пермь">
-<meta property="og:description" content="Собственное производство. Из наличия и по вашим меркам. Шоурум в Перми, доставка по России и миру.">
+<meta property="og:description" content="Шубы, пуховики и пальто собственного производства. Напишите нам, заберите бонусы, приходите в шоурум в Перми.">
 <meta property="og:image" content="https://pikold.github.io/masy-site/link/img/og.jpg">
 <meta property="og:url" content="https://pikold.github.io/masy-site/link/">
 <meta name="twitter:card" content="summary_large_image">
@@ -82,6 +81,10 @@ h1, h2, p { margin: 0; font-weight: 400; }
 .pair .lnk { grid-template-columns: 22px 1fr; gap: 12px; min-height: 58px; padding: 10px 14px; }
 .pair .lnk b { font-size: 15px; }
 .pair .lnk small { font-size: 12px; }
+.trio { grid-template-columns: repeat(3, 1fr); }
+.trio .lnk { grid-template-columns: 1fr; justify-items: center; gap: 9px; min-height: 96px; padding: 14px 6px 12px; text-align: center; }
+.trio .lnk b { font-size: 14.5px; }
+.trio .lnk small { font-size: 11.5px; white-space: nowrap; }
 
 /* Бонусы UDS */
 .bonus { position: relative; margin-top: 12px; padding: 26px 22px 22px; background: var(--ink); color: #fff; overflow: hidden; }
@@ -209,7 +212,11 @@ img.fade.loaded { opacity: 1; }
           <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
         </a>
       </div>
-      <div class="pair">
+      <div class="pair trio">
+        <a class="lnk" data-link="instagram" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.6" y="3.6" width="16.8" height="16.8" rx="4.8"/><circle cx="12" cy="12" r="4"/><circle cx="17.1" cy="6.9" r=".55" fill="currentColor" stroke="none"/></svg>
+          <span><b>Instagram</b><small>@masy.russia</small></span>
+        </a>
         <a class="lnk" data-link="vk" target="_blank" rel="noopener">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round" aria-hidden="true"><path d="M3.6 7.4c.3 5.8 3.2 9.2 8.3 9.2h.3v-3.2c1.9.2 3.2 1.6 3.8 3.2h2.5c-.7-2.6-2.6-4-3.7-4.5 1.1-.7 2.8-2.4 3.2-4.7h-2.3c-.5 1.9-2 3.5-3.5 3.7V7.4H10v6.5c-1.5-.4-3.3-2.2-3.4-6.5H3.6Z"/></svg>
           <span><b>ВКонтакте</b><small>Сообщество</small></span>
@@ -271,6 +278,7 @@ img.fade.loaded { opacity: 1; }
 const MASY = {
   telegram: 'olgasutyagina1',                            // Telegram для заказов (без @)
   max: 'https://max.ru/u/f9LHodD0cOKIzAfgSIzve64Scpe3_eobl87K4FdjckLNQWRKxitczbsPFHA',
+  instagram: 'https://www.instagram.com/masy.russia/',
   vk: 'https://vk.com/public130882764',
   channel: 'https://t.me/bymasy',
   site: '',                                              // когда запустим сайт, вписать адрес, и появится кнопка
@@ -306,7 +314,7 @@ const MASY = {
 
   /* Ссылки */
   const href = {
-    tg: `https://t.me/${MASY.telegram}`, max: MASY.max, vk: MASY.vk, channel: MASY.channel, site: MASY.site, uds: MASY.uds,
+    tg: `https://t.me/${MASY.telegram}`, max: MASY.max, instagram: MASY.instagram, vk: MASY.vk, channel: MASY.channel, site: MASY.site, uds: MASY.uds,
     cert: MASY.cert && MASY.cert.url, yandex: MASY.yandex, gis: MASY.gis, yandexReview: MASY.yandexReview, gisReview: MASY.gisReview,
   };
   $$('[data-link]').forEach((a) => {
