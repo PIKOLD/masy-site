@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>MASY: три варианта сайта</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+  :root { --bg: #f6f2eb; --ink: #2a211c; --ink2: #85776c; --line: #e2d9cc; --ease: cubic-bezier(.22, .7, .2, 1); --gut: clamp(16px, 2.6vw, 40px); }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 15px/1.5 'Jost', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; transition: transform 1.4s var(--ease); }
+  header { padding: clamp(26px, 5vw, 64px) var(--gut) clamp(22px, 3vw, 40px); display: grid; grid-template-columns: 1fr 1fr; gap: 12px 40px; align-items: end; }
+  h1 { margin: 0; font: 400 clamp(38px, 5.6vw, 84px)/1 'Cormorant', Georgia, serif; }
+  header p { margin: 0; color: var(--ink2); max-width: 520px; justify-self: end; }
+  main { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; padding: 0 6px; }
+  article { background: #fff; display: flex; flex-direction: column; min-width: 0; }
+  .shot { position: relative; display: block; aspect-ratio: 4 / 4.7; overflow: hidden; background: #e8dfd1; color: #fff; }
+  .shot::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(25, 18, 12, 0) 45%, rgba(25, 18, 12, .42)); }
+  .shot:hover img { transform: scale(1.035); }
+  .mark { position: absolute; z-index: 2; left: 0; right: 0; bottom: 22px; text-align: center; line-height: 1; }
+  .a .mark { font: 400 56px 'Cormorant', serif; letter-spacing: .22em; padding-left: .22em; }
+  .b .mark { font: 500 58px 'Unbounded', sans-serif; letter-spacing: -.05em; }
+  .c .mark { font: 400 74px 'Oranienbaum', serif; letter-spacing: .04em; }
+  .body { padding: 24px clamp(18px, 2vw, 30px) 28px; display: flex; flex-direction: column; flex: 1; }
+  small { font-size: 12px; color: var(--ink2); letter-spacing: .04em; }
+  h2 { margin: 4px 0 8px; font: 400 clamp(30px, 2.8vw, 40px)/1.05 'Cormorant', Georgia, serif; }
+  .body p { margin: 0 0 16px; color: #5f5248; font-size: 14.5px; }
+  h3 { font: 500 13px 'Jost', sans-serif; margin: 0 0 4px; }
+  .acts { margin-top: auto; padding-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .btn { flex: 1 1 auto; display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 0 18px; font-size: 13px; border: 1px solid var(--ink); transition: background .3s, color .3s; white-space: nowrap; }
+  .btn.solid { background: var(--ink); color: #fff; }
+  .btn:hover { background: #4f3e35; border-color: #4f3e35; color: #fff; }
+  footer { padding: 26px var(--gut) 30px; color: var(--ink2); font-size: 13px; }
+  @media (max-width: 960px) { main { grid-template-columns: 1fr; } header { grid-template-columns: 1fr; } header p { justify-self: start; } .shot { aspect-ratio: 4 / 3.8; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>MASY: три варианта сайта</h1>
+  <p>Каталог, корзина и контакты работают во всех трёх. Главное различие в том, как устроен пошив на заказ. На любой странице можно переключить вариант кнопкой внизу справа.</p>
+</header>
+<main>
+  <article class="a">
+    <a class="shot" href="v1/index.html"><img src="assets/img/lm/trench_a.webp" alt=""><span class="mark">MASY</span></a>
+    <div class="body">
+      <small>Вариант 1</small>
+      <h2>Ателье</h2>
+      <p>Самый близкий к 12 STOREEZ: белый, крем и кофе, мягкая антиква, спокойный двойной разворот на первом экране.</p>
+      <h3>На заказ: две сноски и гид-силуэт</h3>
+      <p>Сначала выбор: из наличия или индивидуально. Затем фигура, на которой линия показывает, где держать ленту для каждой мерки.</p>
+      <div class="acts"><a class="btn solid" href="v1/index.html">Открыть сайт</a><a class="btn" href="v1/index.html#/atelier">Раздел «На заказ»</a></div>
+    </div>
+  </article>
+  <article class="b">
+    <a class="shot" href="v2/index.html"><img src="assets/img/lm/coat_walk.webp" alt=""><span class="mark">MASY</span></a>
+    <div class="body">
+      <small>Вариант 2</small>
+      <h2>Лекало</h2>
+      <p>Самый смелый: белый, чёрный и латте, крупный гротеск и большое имя бренда поверх трёх кадров.</p>
+      <h3>На заказ: живой конструктор</h3>
+      <p>Меняете длину, силуэт, воротник и ткань, и чертёж пальто перестраивается на глазах. Мерки можно снять с себя, с любимой вещи или с мастером.</p>
+      <div class="acts"><a class="btn solid" href="v2/index.html">Открыть сайт</a><a class="btn" href="v2/index.html#/atelier">Раздел «На заказ»</a></div>
+    </div>
+  </article>
+  <article class="c">
+    <a class="shot" href="v3/index.html"><img src="assets/img/lm/fur_beige.webp" alt=""><span class="mark">MASY</span></a>
+    <div class="body">
+      <small>Вариант 3</small>
+      <h2>Лента</h2>
+      <p>Самый тёплый: беж и мокко, дидонная антиква, арочные окна, кадр раскрывается на весь экран при прокрутке.</p>
+      <h3>На заказ: паспорт мерок</h3>
+      <p>Настоящая сантиметровая лента, которую тянешь пальцем. Мерки сохраняются, и потом каждая вещь на сайте показывает ваш размер.</p>
+      <div class="acts"><a class="btn solid" href="v3/index.html">Открыть сайт</a><a class="btn" href="v3/index.html#/atelier">Раздел «На заказ»</a></div>
+    </div>
+  </article>
+</main>
+<footer>Фото, цены и контакты взяты из открытых страниц бренда: UDS, Telegram, ВКонтакте.</footer>
+</body>
+</html>
