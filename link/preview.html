@@ -146,6 +146,8 @@ h1, h2, p { margin: 0; font-weight: 400; }
 .alb:first-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
 .alb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 24%; transition: transform 1.2s var(--ease), opacity .7s var(--ease); }
 .alb:first-child img { object-position: 50% 32%; }
+.alb:last-child:nth-child(even) { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+.alb:last-child:nth-child(even) img { object-position: 50% 12%; }
 .alb:hover img { transform: scale(1.04); }
 .alb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30, 22, 16, 0) 42%, rgba(30, 22, 16, .64) 100%); }
 .alb span { position: absolute; z-index: 1; left: 14px; right: 12px; bottom: 12px; }
@@ -581,7 +583,7 @@ const MASY = {
   });
 
   /* Плитки альбомов на главной */
-  $('#albums').innerHTML = CAT.map((a, i) => `<a class="alb" href="#${a.id}" data-album="${a.id}"><img class="fade" src="${pic(a.cover, i === 0 ? 'l' : 's')}" alt="" loading="lazy" decoding="async"><span><b>${esc(a.title)}</b><small>${models(a.items.length)} · от&nbsp;${rub(fromPrice(a))}</small></span></a>`).join('');
+  $('#albums').innerHTML = CAT.map((a, i) => `<a class="alb" href="#${a.id}" data-album="${a.id}"><img class="fade" src="${pic(a.cover, i === 0 || (i === CAT.length - 1 && CAT.length % 2 === 0) ? 'l' : 's')}" alt="" loading="lazy" decoding="async"><span><b>${esc(a.title)}</b><small>${models(a.items.length)} · от&nbsp;${rub(fromPrice(a))}</small></span></a>`).join('');
   fade($('#albums'));
 
   /* Подсказка внизу экрана */
