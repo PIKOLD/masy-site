@@ -202,9 +202,9 @@ img.fade.loaded { opacity: 1; }
           <span><b>Telegram</b><small>Ольга · наличие, размеры, заказ</small></span>
           <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
         </a>
-        <a class="lnk" data-link="max" target="_blank" rel="noopener">
+        <a class="lnk" data-link="maxChannel" target="_blank" rel="noopener">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.8c-4.6 0-8.2 3.3-8.2 7.8 0 1.9.7 3.7 1.9 5l-.6 3.6 3.5-1.5c1.1.4 2.2.6 3.4.6 4.6 0 8.2-3.4 8.2-7.8S16.6 3.8 12 3.8Z"/><path d="M8.6 14.2V9.3l3.4 3.2 3.4-3.2v4.9"/></svg>
-          <span><b>MAX</b><small>Ольга · по всем вопросам</small></span>
+          <span><b>Канал в MAX</b><small>Новинки и наличие · подписаться</small></span>
           <svg class="ic go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12h17M15 6.5l5.5 5.5-5.5 5.5"/></svg>
         </a>
         <a class="lnk" data-link="site" target="_blank" rel="noopener" hidden>
@@ -279,6 +279,7 @@ img.fade.loaded { opacity: 1; }
 const MASY = {
   telegram: 'olgasutyagina1',                            // Telegram для заказов (без @)
   max: 'https://max.ru/u/f9LHodD0cOKIzAfgSIzve64Scpe3_eobl87K4FdjckLNQWRKxitczbsPFHA',
+  maxChannel: 'https://max.ru/join/Nz16mWgF-fVIeP4H5WX8MYIDqfk_q2eWMKS_Ngo9etA',   // канал MASY в MAX
   instagram: 'https://www.instagram.com/masy.russia/',
   vk: 'https://vk.com/public130882764',
   channel: 'https://t.me/bymasy',
@@ -315,7 +316,7 @@ const MASY = {
 
   /* Ссылки */
   const href = {
-    tg: `https://t.me/${MASY.telegram}`, max: MASY.max, instagram: MASY.instagram, vk: MASY.vk, channel: MASY.channel, site: MASY.site, uds: MASY.uds,
+    tg: `https://t.me/${MASY.telegram}`, max: MASY.max, maxChannel: MASY.maxChannel, instagram: MASY.instagram, vk: MASY.vk, channel: MASY.channel, site: MASY.site, uds: MASY.uds,
     cert: MASY.cert && MASY.cert.url, yandex: MASY.yandex, gis: MASY.gis, yandexReview: MASY.yandexReview, gisReview: MASY.gisReview,
   };
   $$('[data-link]').forEach((a) => {
