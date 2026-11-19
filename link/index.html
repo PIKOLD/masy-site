@@ -202,6 +202,10 @@ html.lock { overflow: hidden; }
 .it-price { margin-top: 14px; font-family: var(--serif); font-size: 34px; line-height: 1; }
 .it-price small { font-family: var(--sans); font-size: 13px; color: var(--ink2); }
 .it-desc { margin-top: 16px; font-size: 14.5px; line-height: 1.6; }
+.it-temp { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin: 16px 0 0; padding: 10px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 14px; }
+.it-temp[hidden] { display: none; }
+.it-temp dt { color: var(--ink2); }
+.it-temp dd { margin: 0; text-align: right; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
 .chips span { padding: 6px 10px; font-size: 12px; border: 1px solid var(--line); }
 .parts { margin-top: 24px; }
@@ -398,6 +402,7 @@ img.fade.loaded { opacity: 1; }
     <p class="it-color" id="itemColor"></p>
     <p class="it-price" id="itemPrice"></p>
     <p class="it-desc" id="itemDesc"></p>
+    <dl class="it-temp" id="itemTemp" hidden></dl>
     <div class="chips" id="itemFacts"></div>
     <div class="parts" id="itemParts"></div>
     <div class="it-alt">
@@ -631,6 +636,8 @@ const MASY = {
     $('#itemColor').innerHTML = `<i class="sw" style="--c:${esc(p.hex || '')}"></i>${esc(p.color)}`;
     $('#itemPrice').innerHTML = `${rub(p.price)}${p.kit ? ' <small>за комплект</small>' : ''}`;
     $('#itemDesc').textContent = p.desc || '';
+    const temp = $('#itemTemp'); temp.hidden = !p.temp;
+    temp.innerHTML = p.temp ? `<dt>Температурный режим</dt><dd>${esc(p.temp)}</dd>` : '';
     $('#itemFacts').innerHTML = (p.facts || []).map((f) => `<span>${esc(f)}</span>`).join('');
     $('#itemParts').innerHTML = p.parts && p.parts.length
       ? `<small class="eyebrow">Цены по&nbsp;отдельности</small><dl>${p.parts.map(([n, v]) => `<div><dt>${esc(n)}</dt><dd>${rub(v)}</dd></div>`).join('')}</dl>` : '';
