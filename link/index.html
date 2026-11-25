@@ -227,6 +227,7 @@ html.lock { overflow: hidden; }
 .foot-quote { font-family: var(--serif); font-size: 32px; line-height: 1.1; margin-bottom: 28px; }
 .foot-mark { font-family: var(--serif); font-size: 24px; letter-spacing: .24em; padding-left: .24em; }
 .foot small { display: block; margin-top: 8px; font-size: 12px; color: var(--ink2); }
+.foot .foot-req { margin-top: 4px; }
 
 /* Появление при прокрутке */
 img.fade { opacity: 0; transition: opacity .7s var(--ease); }
@@ -364,7 +365,8 @@ img.fade.loaded { opacity: 1; }
   <footer class="foot">
     <p class="foot-quote">Мода переменчива,<br>стиль вечен</p>
     <div class="foot-mark">MASY</div>
-    <small id="legal"></small>
+    <small id="legal">© MASY</small>
+    <small class="foot-req">ИП Сутягин Антон Михайлович · ИНН&nbsp;590610280198</small>
   </footer>
 </div>
 
@@ -439,7 +441,7 @@ const MASY = {
   gisReview: 'https://2gis.ru/perm/firm/70000001030468474/tab/reviews/addreview?m=56.260835%2C58.005855%2F16',
   // часы шоурума по пермскому времени: [день недели 0=вс..6=сб] = [открытие, закрытие]
   hours: { 1: [15, 20], 2: [15, 20], 3: [15, 20], 4: [15, 20], 5: [15, 20], 6: [14, 18], 0: [14, 18] },
-  legal: 'ИП Сутягин',
+  legal: 'MASY',
   ticker: ['Собственное производство', 'Пошив по вашим меркам', 'Доставка по России и миру', 'Шоурум в Перми'],
   looks: ['look1', 'look2', 'look3', 'look4', 'look5', 'look6'],   // фото в img/<имя>-720.webp
 };
